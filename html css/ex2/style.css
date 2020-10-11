@@ -1,0 +1,49 @@
+body{
+    background-image: url('slide-01.jpg');
+    background-attachment: fixed;
+    font-family: 'Merienda One	';font-size: 22px;
+}
+.title{
+    color: white;
+    width: 25%;
+    float: left;
+}   
+.links{
+    float: right;
+    margin-top: 30px;
+}
+.link{
+    margin-right: 50px;
+    font-size: large;
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: white;
+    opacity: 0.5;
+}
+a:hover {
+    color: white;
+    opacity: 1;
+}
+a:active {
+    color: lightblue;
+}
+.main{
+    color:white;
+    margin-top: 350px;
+    margin-left: 120px;
+    float:left;
+}
+h3{
+    text-align: center;
+}
+.button{
+    padding: 5px 10px 5px 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-left: 30px;
+}
+.b1{
+    background-color: white;
+    color:rgba(255,0,0,0.5);
+}

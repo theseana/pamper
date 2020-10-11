@@ -1,0 +1,65 @@
+start bootsrtap
+    layput
+        containter
+    grid
+        row
+        col
+        row-cols-3
+        bg-primary
+        # in row
+        align-items-start
+        align-items-center
+        align-items-end
+        # in col
+        align-self-start
+        align-self-center
+        align-self-end
+        # in row
+        justify-content-start
+        justify-content-center
+        justify-content-end
+        justify-content-around
+        justify-content-between
+
+    typography:
+        h1, h2, ..., h6
+        text-muted
+        display-1, ..., display-4
+        lead
+        text-center
+        text-right
+        blockquote
+        blockquote-footer
+        list-unstyled
+        list-inline
+        list-inline-item
+    image:
+        img-fluid
+        img-thumbnail
+        rounded
+        float-left
+        float-right
+    table:
+        table
+        table-dark # and so on ... on ROW on CELL
+        thead-light
+        thead-dark
+        table-striped
+        table-bordered
+        table-borderless
+        table-hover
+        table-sm
+
+
+
+Components:
+
+    Navs:
+        nav
+        nav-item
+        nav-link
+        disabled
+        justify-content-center
+        justify-content-end
+        nav-tabs
+        nav-pills
