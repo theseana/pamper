@@ -15,32 +15,60 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <div class="conainer">
-      <nav class="navbar navbar-light bg-white justify-content-between">
-        <a href="#" class="text-secondary">Subscribe</a>
-        <a class="h1 text-dark text-decoration-none">Navbar</a>
-        <form class="form-inline">
-          <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="mr-3 bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
-            <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
-          </svg>
-          
-          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Sign Up</button>
-        </form>
-      </nav>
+    <div class="container">
+      <header class="blog-header">
+        <nav class="navbar navbar-light bg-white justify-content-between">
+          <a href="#" class="text-secondary">Subscribe</a>
+          <a class="h1 text-dark text-decoration-none">Navbar</a>
+          <form class="form-inline">
+            <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="mr-3 bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+              <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+            </svg>
+            
+            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Sign Up</button>
+          </form>
+        </nav>
+      </header>
+
       <hr>
-      <div class="row">
-        <div class="btn col text-secondary">World</div>
-        <div class="btn col text-secondary">U.S.</div>
-        <div class="btn col text-secondary">Technology</div>
-        <div class="btn col text-secondary">Design</div>
-        <div class="btn col text-secondary">Culture</div>
-        <div class="btn col text-secondary">Business</div>
-        <div class="btn col text-secondary">Politics</div>
-        <div class="btn col text-secondary">Opinion</div>
-        <div class="btn col text-secondary">Science</div>
-        <div class="btn col text-secondary">Health</div>
-        <div class="btn col text-secondary">Style</div>
+
+      <div class="row justify-content-center">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link text-muted" href="#">World</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-muted" href="#">U.S.</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-muted" href="#">Technology</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-muted" href="#">Design</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-muted" href="#">Culture</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-muted" href="#">Business</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-muted" href="#">Politics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-muted" href="#">Opinion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-muted" href="#">Science</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-muted" href="#">Health</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-muted" href="#">Style</a>
+          </li>
+        </ul>
       </div>
 
       <div class="row justify-content-center">
@@ -51,6 +79,47 @@
             <a href="#" class="card-link">Continue reading...</a>
           </div>
         </div>
+      </div>
+
+      <div class="row mt-3 justify-content-around">
+        
+        <div class="col-6">
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <img src="images/img.png" class="card-img" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+            
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <img src="images/img.png" class="card-img" alt="...">
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
       </div>
 
     </div>
