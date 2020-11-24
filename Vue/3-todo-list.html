@@ -10,11 +10,13 @@
     <div class="container" id="app">
         <p class="h1 text-warning"> My ToDo List</p>
         <div class="list-group">
-          <button v-for="todo in todos" type="button" class="btn-danger list-group-item list-group-item-action active">
+          <button v-for="todo in todos"
+            type="button" 
+            class="btn-danger list-group-item list-group-item-action active">
             {{ todo }}
           </button>
         </div>
-        <input v-on:keyup.enter=>
+        <input v-model="newToDo" v-on:keyup.enter="addToTodos">
     </div>
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -24,11 +26,21 @@
         var app = new Vue({
             el: "#app",
             data:{
+                newToDo: '',
                 todos: [
+                  'Water',
                   'Milk',
                   'Learn Vue',
                   'Ready for Math Test',
                 ],
+            },
+            methods:{
+              addToTodos(){
+                if(this.newToDo != ''){
+                  this.todos.push(this.newToDo);
+                  this.newToDo = '';
+                }
+              }
             }
         });
     </script>
