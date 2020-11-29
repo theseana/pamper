@@ -12,22 +12,25 @@
       <p class="h1 text-warning"> My ToDo List</p>
 
       <a v-on:click.prevent="changeState(index)" 
-        href="#" v-for="(todo, index) in todos" 
-        class="btn btn-gray flex-column list-group-item list-group-item-action active">
+        href="#" v-for="(todo, index) in todos" v-if="todo.state == false"
+        class="btn btn-primary flex-column list-group-item list-group-item-action active">
         <div :class="{itsdone: todo.state}"
           class="row justify-content-between">
           <h3 class="mt-2 ml-2">{{ todo.title }}</h3>
-
-          <svg v-on:click.prevent="removeToDo(index)"
-            width="2em" height="2em" viewBox="0 0 16 16" class="mb-2 mr-3 mt-2 bi bi-x-square-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-          </svg>
-
         </div>
       </a>
       
       <input class="mt-2 form-control form-control-lg" v-model="newToDo.title" v-on:keyup.enter="addToTodos">
+      
+      <p class="h1 text-warning"> Done List</p>
 
+      <a href="#" v-for="(todo, index) in completedTodo" 
+        class="btn btn-success flex-column list-group-item list-group-item-action active">
+        <div :class="{itsdone: todo.state}"
+          class="row justify-content-between">
+          <h3 class="mt-2 ml-2">{{ todo.title }}</h3>
+        </div>
+      </a>
       
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -54,11 +57,13 @@
                   this.newToDo = {title: '', state:false};
                 }
               },
-              removeToDo(index){
-                this.todos.splice(index, 1)
-              },
               changeState(index){
                 this.todos[index].state = !this.todos[index].state
+              }
+            },
+            computed:{
+              completedTodo(){
+              return this.todos.filter(todos => todos.state)
               }
             }
         });
